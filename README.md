@@ -12,7 +12,7 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 ## Table of contents
 
 - [About](#about-seam-runner)
-- [What you get today](#what-you-get-today-v007)
+- [What you get today](#what-you-get-today-v009)
 - [System requirements](#system-requirements)
 - [License](#license-and-legal)
 - [Download](#download-a-release)
@@ -28,8 +28,8 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 
 ## About Seam Runner
 
-- **Blender extension** (`seam_runner`) — UI and operators  
-- **Geometry core** (`seam_runner_core`, bundled wheel) — NumPy, no Blender API  
+- **Blender extension** (`seam_runner`) — UI and operators
+- **Geometry core** (`seam_runner_core`, bundled wheel) — NumPy, no Blender API
 
 Install the **pre-built zip** from **Releases**. You do not need Python or a compiler on your machine.
 
@@ -37,16 +37,16 @@ Install the **pre-built zip** from **Releases**. You do not need Python or a com
 
 ---
 
-## What you get today (v0.0.7)
+## What you get today (v0.0.9)
 
 | Included | Not included yet |
 | --- | --- |
 | Installable extension zip | Flanges, blades, keys, full mold export |
 | ZBrush **import / export** (OBJ, PLY, STL) | Valve split, ZBrush step-by-step guide |
-| **Partition lines** — anchors, geodesic curve, surface snap, opening axis | extensions.blender.org listing |
+| **Partition lines** — geodesic, **refine** (spacing + relax), surface snap, opening axis | extensions.blender.org listing |
 | Project checklist, mm setup | Paid / commercial licensing |
 
-Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.0.7**).
+Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.0.9**).
 
 ---
 
@@ -75,25 +75,25 @@ GPL: you may request **corresponding source** for the extension from the maintai
 
 ## Download a release
 
-1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.0.7** (or latest).
+1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.0.9** (or latest).
 2. Under **Assets**, download:
 
    | Asset | Purpose |
    | --- | --- |
-   | **`seam_runner-0.0.7.zip`** | Install in Blender |
-   | **`seam_runner-0.0.7.zip.sha256`** | Optional integrity check |
+   | **`seam_runner-0.0.9.zip`** | Install in Blender |
+   | **`seam_runner-0.0.9.zip.sha256`** | Optional integrity check |
    | **`RELEASE.md`**, **`TESTING.md`** | Notes and checklist |
 
    Use **`seam_runner-….zip`**, not GitHub’s auto-generated **“Source code (zip)”** (that is this repo’s README/LICENSE snapshot, not the add-on).
 
-3. CLI: `gh release download v0.0.7 -R alessandroiori/seam-runner-releases`
+3. CLI: `gh release download v0.0.9 -R alessandroiori/seam-runner-releases`
 
 ---
 
 ## Verify the download (SHA-256)
 
-**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.0.7.zip`  
-**macOS / Linux:** `shasum -a 256 seam_runner-0.0.7.zip`
+**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.0.9.zip`
+**macOS / Linux:** `shasum -a 256 seam_runner-0.0.9.zip`
 
 Match the `.sha256` file from the **same** release.
 
@@ -103,7 +103,7 @@ Match the `.sha256` file from the **same** release.
 
 1. Install **[Blender 5.2.2](https://www.blender.org/download/)** (or maintainer-approved version).
 2. **Edit → Preferences → Get Extensions → Install from Disk…**
-3. Select **`seam_runner-0.0.7.zip`** — **do not unzip**.
+3. Select **`seam_runner-0.0.9.zip`** — **do not unzip**.
 4. Enable **Seam Runner**; restart Blender if the sidebar tab is missing.
 
 ---
@@ -116,7 +116,7 @@ Match the `.sha256` file from the **same** release.
 4. **Lines → Add partition line → Edit anchors** (Enter to rebuild).
 5. Optional: **Export to ZBrush**.
 
-Panel should show **Seam Runner** and version **0.0.7** (matches the zip you installed).
+Panel should show **Seam Runner** and version **0.0.9** (matches the zip you installed).
 
 ---
 
@@ -151,6 +151,7 @@ Send the maintainer that **one line**.
 
 | Version | Summary |
 | --- | --- |
+| [**v0.0.9**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.9) | Line refine + fast surface projection on large meshes |
 | [**v0.0.7**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.7) | Curved-mesh testing path; same features as 0.0.6 |
 | [**v0.0.6**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.6) | Checklist, mm on import, shared nodes, surface projection |
 | [**v0.0.5**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.5) | Partition lines MVP |
@@ -159,7 +160,7 @@ Send the maintainer that **one line**.
 | [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Engine contract, panel foundations |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Installable shell |
 
-Tag **`v0.0.7`** → panel **0.0.7**.
+Tag **`v0.0.9`** → panel **0.0.9**.
 
 ---
 
