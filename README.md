@@ -191,6 +191,7 @@ Include screenshots, exact Blender version, and the Scripting one-liner when con
 
 | Version | Summary |
 | --- | --- |
+| [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Phase 0 foundations — engine contract, license skeleton, panel lines |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Phase 0A shell — installable extension, name/version panel |
 
 Semantic versioning: **`vMAJOR.MINOR.PATCH`** tags match the extension version without the `v` prefix (tag **`v0.0.1`** → panel **0.0.1**).
