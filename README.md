@@ -12,7 +12,7 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 ## Table of contents
 
 - [About](#about-seam-runner)
-- [What you get today](#what-you-get-today-v040)
+- [What you get today](#what-you-get-today-v041)
 - [System requirements](#system-requirements)
 - [License](#license-and-legal)
 - [Download](#download-a-release)
@@ -37,18 +37,18 @@ Install the **pre-built zip** from **Releases**. You do not need Python or a com
 
 ---
 
-## What you get today (v0.4.0)
+## What you get today (v0.4.1)
 
-**Phase 1 layout milestone** — one **TESTING.md** from import through **Export mold bundle**; see release assets.
+**Phase 1 layout milestone** + **v0.4.1 hotfixes** (mm defaults, POLY curves, Solidify, export warnings) — one **TESTING.md** from import through **Export mold bundle**; see release assets.
 
 | Included | Not included yet |
 | --- | --- |
 | **Build full layout** (flange → blade → rims → keys → bolts) | Valve split in Blender (B12) |
 | ZBrush import/export + **mold bundle** | extensions.blender.org listing |
 | Checklist through **Full mold layout** and **Mold bundle export ready** | Paid / commercial licensing |
-| mm project setup, partition lines, shared-node weld | |
+| mm project setup, partition lines, shared-node weld | RF-05 self-intersection blocking (D01) |
 
-Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.4.0**).
+Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.4.1**).
 
 ---
 
@@ -77,25 +77,25 @@ GPL: you may request **corresponding source** for the extension from the maintai
 
 ## Download a release
 
-1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.4.0** (or latest).
+1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.4.1** (or latest).
 2. Under **Assets**, download:
 
    | Asset | Purpose |
    | --- | --- |
-   | **`seam_runner-0.4.0.zip`** | Install in Blender |
-   | **`seam_runner-0.4.0.zip.sha256`** | Optional integrity check |
+   | **`seam_runner-0.4.1.zip`** | Install in Blender |
+   | **`seam_runner-0.4.1.zip.sha256`** | Optional integrity check |
    | **`RELEASE.md`**, **`TESTING.md`** | Notes and checklist |
 
    Use **`seam_runner-….zip`**, not GitHub’s auto-generated **“Source code (zip)”** (that is this repo’s README/LICENSE snapshot, not the add-on).
 
-3. CLI: `gh release download v0.4.0 -R alessandroiori/seam-runner-releases`
+3. CLI: `gh release download v0.4.1 -R alessandroiori/seam-runner-releases`
 
 ---
 
 ## Verify the download (SHA-256)
 
-**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.4.0.zip`
-**macOS / Linux:** `shasum -a 256 seam_runner-0.4.0.zip`
+**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.4.1.zip`
+**macOS / Linux:** `shasum -a 256 seam_runner-0.4.1.zip`
 
 Match the `.sha256` file from the **same** release.
 
@@ -105,7 +105,7 @@ Match the `.sha256` file from the **same** release.
 
 1. Install **[Blender 5.2.2](https://www.blender.org/download/)** (or maintainer-approved version).
 2. **Edit → Preferences → Get Extensions → Install from Disk…**
-3. Select **`seam_runner-0.4.0.zip`** — **do not unzip**.
+3. Select **`seam_runner-0.4.1.zip`** — **do not unzip**.
 4. Enable **Seam Runner**; restart Blender if the sidebar tab is missing.
 
 ---
@@ -119,7 +119,7 @@ Match the `.sha256` file from the **same** release.
 5. **Flanges → Build full layout** (or step through parts).
 6. **Import → Export mold bundle**.
 
-Panel should show **Seam Runner** and version **0.4.0** (matches the zip you installed).
+Panel should show **Seam Runner** and version **0.4.1** (matches the zip you installed).
 
 ---
 
@@ -154,6 +154,7 @@ Send the maintainer that **one line**.
 
 | Version | Summary |
 | --- | --- |
+| [**v0.4.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.4.1) | Hotfix — mm defaults, POLY curves, Solidify, export warnings |
 | [**v0.4.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.4.0) | **Layout milestone** — one TESTING, build full layout |
 | [**v0.3.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.3.1) | **B08–B09** keys and bolts |
 | [**v0.3.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.3.0) | **B10** mold bundle export |
@@ -170,7 +171,7 @@ Send the maintainer that **one line**.
 | [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Engine contract, panel foundations |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Installable shell |
 
-Tag **`v0.4.0`** → panel **0.4.0**.
+Tag **`v0.4.1`** → panel **0.4.1**.
 
 ---
 
