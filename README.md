@@ -12,7 +12,7 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 ## Table of contents
 
 - [About](#about-seam-runner)
-- [What you get today](#what-you-get-today-v009)
+- [What you get today](#what-you-get-today-v010)
 - [System requirements](#system-requirements)
 - [License](#license-and-legal)
 - [Download](#download-a-release)
@@ -37,16 +37,18 @@ Install the **pre-built zip** from **Releases**. You do not need Python or a com
 
 ---
 
-## What you get today (v0.0.9)
+## What you get today (v0.1.0)
+
+**Phase 1** — import, partition lines, export round-trip; one **TESTING.md** walkthrough.
 
 | Included | Not included yet |
 | --- | --- |
-| Installable extension zip | Flanges, blades, keys, full mold export |
-| ZBrush **import / export** (OBJ, PLY, STL) | Valve split, ZBrush step-by-step guide |
-| **Partition lines** — geodesic, **refine** (spacing + relax), surface snap, opening axis | extensions.blender.org listing |
-| Project checklist, mm setup | Paid / commercial licensing |
+| ZBrush **import / export** (OBJ, PLY, STL) + stored transform | Flanges, blades, keys, full mold export |
+| **Partition lines** — geodesic, refine, surface snap, opening axis, shared nodes | Valve split, guided ZBrush workflow |
+| **Checklist (B11)** with scope note | extensions.blender.org listing |
+| mm project setup (incl. on import) | Paid / commercial licensing |
 
-Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.0.9**).
+Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.1.0**).
 
 ---
 
@@ -54,7 +56,7 @@ Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releas
 
 | Item | Requirement |
 | --- | --- |
-| **OS (acceptance)** | **Windows x64** |
+| **OS (acceptance)** | **Windows x64** (same zip also installs on **macOS** and **Linux**) |
 | **Blender (recommended)** | **[5.2.2](https://www.blender.org/download/)** |
 | **Blender (minimum)** | **4.5.0** (extension manifest) |
 | **Network** | To download Blender and release assets; add-on runs offline after install |
@@ -75,25 +77,25 @@ GPL: you may request **corresponding source** for the extension from the maintai
 
 ## Download a release
 
-1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.0.9** (or latest).
+1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.1.0** (or latest).
 2. Under **Assets**, download:
 
    | Asset | Purpose |
    | --- | --- |
-   | **`seam_runner-0.0.9.zip`** | Install in Blender |
-   | **`seam_runner-0.0.9.zip.sha256`** | Optional integrity check |
+   | **`seam_runner-0.1.0.zip`** | Install in Blender |
+   | **`seam_runner-0.1.0.zip.sha256`** | Optional integrity check |
    | **`RELEASE.md`**, **`TESTING.md`** | Notes and checklist |
 
    Use **`seam_runner-….zip`**, not GitHub’s auto-generated **“Source code (zip)”** (that is this repo’s README/LICENSE snapshot, not the add-on).
 
-3. CLI: `gh release download v0.0.9 -R alessandroiori/seam-runner-releases`
+3. CLI: `gh release download v0.1.0 -R alessandroiori/seam-runner-releases`
 
 ---
 
 ## Verify the download (SHA-256)
 
-**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.0.9.zip`
-**macOS / Linux:** `shasum -a 256 seam_runner-0.0.9.zip`
+**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.1.0.zip`
+**macOS / Linux:** `shasum -a 256 seam_runner-0.1.0.zip`
 
 Match the `.sha256` file from the **same** release.
 
@@ -103,7 +105,7 @@ Match the `.sha256` file from the **same** release.
 
 1. Install **[Blender 5.2.2](https://www.blender.org/download/)** (or maintainer-approved version).
 2. **Edit → Preferences → Get Extensions → Install from Disk…**
-3. Select **`seam_runner-0.0.9.zip`** — **do not unzip**.
+3. Select **`seam_runner-0.1.0.zip`** — **do not unzip**.
 4. Enable **Seam Runner**; restart Blender if the sidebar tab is missing.
 
 ---
@@ -114,9 +116,9 @@ Match the `.sha256` file from the **same** release.
 2. **Project → Set up project (mm)** (or import with **Millimetres on import**).
 3. **Import → Import from ZBrush** (OBJ / PLY / STL).
 4. **Lines → Add partition line → Edit anchors** (Enter to rebuild).
-5. Optional: **Export to ZBrush**.
+5. **Export to ZBrush** when checklist shows export ready.
 
-Panel should show **Seam Runner** and version **0.0.9** (matches the zip you installed).
+Panel should show **Seam Runner** and version **0.1.0** (matches the zip you installed).
 
 ---
 
@@ -151,6 +153,7 @@ Send the maintainer that **one line**.
 
 | Version | Summary |
 | --- | --- |
+| [**v0.1.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.1.0) | **Phase 1** — full TESTING walkthrough + checklist |
 | [**v0.0.9**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.9) | Line refine + fast surface projection on large meshes |
 | [**v0.0.7**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.7) | Curved-mesh testing path; same features as 0.0.6 |
 | [**v0.0.6**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.6) | Checklist, mm on import, shared nodes, surface projection |
@@ -160,7 +163,7 @@ Send the maintainer that **one line**.
 | [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Engine contract, panel foundations |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Installable shell |
 
-Tag **`v0.0.9`** → panel **0.0.9**.
+Tag **`v0.1.0`** → panel **0.1.0**.
 
 ---
 
