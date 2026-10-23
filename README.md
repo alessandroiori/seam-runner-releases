@@ -37,18 +37,19 @@ Install the **pre-built zip** from **Releases**. You do not need Python or a com
 
 ---
 
-## What you get today (v1.0.0)
+## What you get today (v1.1.0)
 
-**Fase 1 layout exit** + **experimental B12** — see **`PHASE1-EXIT.md`** and **`TESTING.md`** on the release.
+**Fase 1 layout** + **experimental B12** + legacy parity options — see **`CLIENT-SUMMARY.md`** and **`TESTING.md`** on the release.
 
-| Included | Not included yet (post-1.0) |
+| Included | Not included yet (post-1.1) |
 | --- | --- |
 | **Build full layout** (flange → blade → rims → keys → bolts) | Full legacy boolean valve division |
-| **Extract valves (experimental):** bisect, cap, rims, **trim**, **discard internal** (B12.9) | HD ZBrush-only workflow replacement |
+| **Extract valves (experimental):** bisect, cap, rims, **trim**, **discard internal** (B12.9) | B12.8 wavy bisect; layout cutter clearance |
+| **Join rims to valve body**; **Valve gap (mm)** for rim trim | HD ZBrush-only workflow replacement |
 | ZBrush import/export + **mold bundle**; mm setup; checklist | Silicone volume, Pro licensing (Fase 2+) |
 | Quality INFO/WARNING UX; flange/bisect offset UI | Six heavy reference meshes (manual appendix when assets ship) |
 
-Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v1.0.0**).
+Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v1.1.0**). **Fase 1 exit** remains documented on **v1.0.0** (`PHASE1-EXIT.md`).
 
 ---
 
@@ -77,18 +78,18 @@ GPL: you may request **corresponding source** for the extension from the maintai
 
 ## Download a release
 
-1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v1.0.0** (or latest).
+1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v1.1.0** (or latest).
 2. Under **Assets**, download:
 
    | Asset | Purpose |
    | --- | --- |
-   | **`seam_runner-1.0.0.zip`** | Install in Blender |
-   | **`seam_runner-1.0.0.zip.sha256`** | Optional integrity check |
-   | **`RELEASE.md`**, **`TESTING.md`**, **`PHASE1-EXIT.md`** | Notes and checklist |
+   | **`seam_runner-1.1.0.zip`** | Install in Blender |
+   | **`seam_runner-1.1.0.zip.sha256`** | Optional integrity check |
+   | **`RELEASE.md`**, **`TESTING.md`**, **`CLIENT-SUMMARY.md`** | Notes and checklist |
 
    Use **`seam_runner-….zip`**, not GitHub’s auto-generated **“Source code (zip)”** (that is this repo’s README/LICENSE snapshot, not the add-on).
 
-3. CLI: `gh release download v1.0.0 -R alessandroiori/seam-runner-releases`
+3. CLI: `gh release download v1.1.0 -R alessandroiori/seam-runner-releases`
 
 ---
 
@@ -154,6 +155,7 @@ Send the maintainer that **one line**.
 
 | Version | Summary |
 | --- | --- |
+| [**v1.1.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.1.0) | Join rims + valve gap; TESTING A–M; core 0.0.12 |
 | [**v1.0.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.0.0) | **Fase 1 exit** — B12.9 discard internal, TESTING A–K |
 | [**v0.10.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.10.0) | Rim trim reliability (solver fallback, clearance mm) |
 | [**v0.9.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.9.0) | Rim trim MVP + D01 hollow heuristic |
@@ -178,7 +180,7 @@ Send the maintainer that **one line**.
 | [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Engine contract, panel foundations |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Installable shell |
 
-Tag **`v1.0.0`** → panel **1.0.0**.
+Tag **`v1.1.0`** → panel **1.1.0**.
 
 ---
 
