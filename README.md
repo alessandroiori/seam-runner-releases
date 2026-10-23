@@ -12,7 +12,7 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 ## Table of contents
 
 - [About](#about-seam-runner)
-- [What you get today](#what-you-get-today-v022)
+- [What you get today](#what-you-get-today-v030)
 - [System requirements](#system-requirements)
 - [License](#license-and-legal)
 - [Download](#download-a-release)
@@ -37,19 +37,19 @@ Install the **pre-built zip** from **Releases**. You do not need Python or a com
 
 ---
 
-## What you get today (v0.2.2)
+## What you get today (v0.3.0)
 
-**Phase 1 + flange / blade / rims** — import, lines, mold layout helpers, export; see **TESTING.md**.
+**Phase 1 + mold layout export** — import, lines, flange/blade/rims, **single-file mold bundle**; see **TESTING.md**.
 
 | Included | Not included yet |
 | --- | --- |
-| ZBrush **import / export** (OBJ, PLY, STL) + stored transform | Keys, unified mold export bundle |
-| **Partition lines** — geodesic, refine, surface snap, opening axis, shared nodes | Valve split, guided ZBrush workflow |
-| **Flange** (inner depth, node weld), **blade**, **rim A/B** | Rim “Asse” mode, hardware bolts |
-| **Checklist (B11)** with scope note | extensions.blender.org listing |
+| ZBrush **import / export** + **mold bundle** (inverse transform) | Keys/bolts (next releases) |
+| **Partition lines**, **flange**, **blade**, **rim A/B** | Valve split, guided ZBrush workflow |
+| **Export mold bundle** with optional three-arm reference | Rim “Asse” mode |
+| **Checklist (B11)** | extensions.blender.org listing |
 | mm project setup (incl. on import) | Paid / commercial licensing |
 
-Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.2.2**).
+Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v0.3.0**).
 
 ---
 
@@ -78,25 +78,25 @@ GPL: you may request **corresponding source** for the extension from the maintai
 
 ## Download a release
 
-1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.2.2** (or latest).
+1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v0.3.0** (or latest).
 2. Under **Assets**, download:
 
    | Asset | Purpose |
    | --- | --- |
-   | **`seam_runner-0.2.2.zip`** | Install in Blender |
-   | **`seam_runner-0.2.2.zip.sha256`** | Optional integrity check |
+   | **`seam_runner-0.3.0.zip`** | Install in Blender |
+   | **`seam_runner-0.3.0.zip.sha256`** | Optional integrity check |
    | **`RELEASE.md`**, **`TESTING.md`** | Notes and checklist |
 
    Use **`seam_runner-….zip`**, not GitHub’s auto-generated **“Source code (zip)”** (that is this repo’s README/LICENSE snapshot, not the add-on).
 
-3. CLI: `gh release download v0.2.2 -R alessandroiori/seam-runner-releases`
+3. CLI: `gh release download v0.3.0 -R alessandroiori/seam-runner-releases`
 
 ---
 
 ## Verify the download (SHA-256)
 
-**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.2.2.zip`
-**macOS / Linux:** `shasum -a 256 seam_runner-0.2.2.zip`
+**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-0.3.0.zip`
+**macOS / Linux:** `shasum -a 256 seam_runner-0.3.0.zip`
 
 Match the `.sha256` file from the **same** release.
 
@@ -106,7 +106,7 @@ Match the `.sha256` file from the **same** release.
 
 1. Install **[Blender 5.2.2](https://www.blender.org/download/)** (or maintainer-approved version).
 2. **Edit → Preferences → Get Extensions → Install from Disk…**
-3. Select **`seam_runner-0.2.2.zip`** — **do not unzip**.
+3. Select **`seam_runner-0.3.0.zip`** — **do not unzip**.
 4. Enable **Seam Runner**; restart Blender if the sidebar tab is missing.
 
 ---
@@ -117,10 +117,10 @@ Match the `.sha256` file from the **same** release.
 2. **Project → Set up project (mm)** (or import with **Millimetres on import**).
 3. **Import → Import from ZBrush** (OBJ / PLY / STL).
 4. **Lines → Add partition line → Edit anchors** (Enter to rebuild).
-5. **Flanges → Build flange** (optional: blade, rims).
-6. **Export to ZBrush** when checklist shows export ready.
+5. **Flanges → Build flange** (blade, rims).
+6. **Import → Export mold bundle** (or export selection to ZBrush).
 
-Panel should show **Seam Runner** and version **0.2.2** (matches the zip you installed).
+Panel should show **Seam Runner** and version **0.3.0** (matches the zip you installed).
 
 ---
 
@@ -155,6 +155,7 @@ Send the maintainer that **one line**.
 
 | Version | Summary |
 | --- | --- |
+| [**v0.3.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.3.0) | **B10** mold bundle export |
 | [**v0.2.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.2.2) | **B07** rim A/B from flange |
 | [**v0.2.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.2.1) | Inner depth, node weld, **B06** blade |
 | [**v0.2.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.2.0) | **B05** adaptive flange sheet |
@@ -168,7 +169,7 @@ Send the maintainer that **one line**.
 | [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Engine contract, panel foundations |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Installable shell |
 
-Tag **`v0.2.2`** → panel **0.2.2**.
+Tag **`v0.3.0`** → panel **0.3.0**.
 
 ---
 
