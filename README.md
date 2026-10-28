@@ -1,7 +1,9 @@
 # Seam Runner
 
-[![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue.svg)](LICENSE)
-[![Latest release](https://img.shields.io/github/v/release/alessandroiori/seam-runner-releases?label=release)](https://github.com/alessandroiori/seam-runner-releases/releases/latest)
+[![License: GPL-3.0-or-later](https://img.shields.io/github/license/alessandroiori/seam-runner-releases?label=License)](LICENSE)
+[![Latest release: v1.5.1](https://img.shields.io/github/v/release/alessandroiori/seam-runner-releases?label=Latest%20release&color=007ec6)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
+[![Extension](https://img.shields.io/badge/extension-1.5.1-informational)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
+[![Core](https://img.shields.io/badge/core-0.0.21-informational)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
 
 **Design multi-part 3D-printable molds with free partition lines** — Blender extension for SFX workflows: sculpt in **ZBrush**, mold layout and partition lines in **Blender**, export back to ZBrush when needed.
 
@@ -160,7 +162,7 @@ Send the maintainer that **one line**.
 | Version | Summary |
 | --- | --- |
 | [**v1.5.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1) | Blade ext, reinforcement, Federico preset, Alt+RMB anchors; core **0.0.21** |
-| [**v1.5.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.0) | Mesh bolt band, import file units; core **0.0.20** |
+| **v1.5.0** (monorepo only; install **v1.5.1**) | Mesh bolt band, import file units; core **0.0.20** |
 | [**v1.4.4**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.4.4) | Apply hide, legacy extend message, in-memory core restart banner; core **0.0.15** |
 | [**v1.1.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.1.0) | Join rims + valve gap; TESTING A–M; core 0.0.12 |
 | [**v1.0.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.0.0) | **Fase 1 exit** — B12.9 discard internal, TESTING A–K |
