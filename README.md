@@ -12,7 +12,7 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 ## Table of contents
 
 - [About](#about-seam-runner)
-- [What you get today](#what-you-get-today-v050)
+- [What you get today](#what-you-get-today-v151)
 - [System requirements](#system-requirements)
 - [License](#license-and-legal)
 - [Download](#download-a-release)
@@ -22,6 +22,7 @@ This repository publishes **installable builds only** (GitHub Releases). It is *
 - [Testing](#acceptance-testing)
 - [Troubleshooting](#troubleshooting)
 - [Release history](#release-history)
+- [Authors](#authors)
 - [Support](#support)
 
 ---
@@ -37,19 +38,19 @@ Install the **pre-built zip** from **Releases**. You do not need Python or a com
 
 ---
 
-## What you get today (v1.1.0)
+## What you get today (v1.5.1)
 
-**Fase 1 layout** + **experimental B12** + legacy parity options — see **`CLIENT-SUMMARY.md`** and **`TESTING.md`** on the release.
+**Federico workflow release** — blade sporgenza, rinforzo cilindrico, preset numerico, bulloni su mesh flangia (from **1.5.0**), import unità file. See **`RELEASE.md`** and **`TESTING.md`** on the release.
 
-| Included | Not included yet (post-1.1) |
+| Included | Not included yet |
 | --- | --- |
-| **Build full layout** (flange → blade → rims → keys → bolts) | Full legacy boolean valve division |
-| **Extract valves (experimental):** bisect, cap, rims, **trim**, **discard internal** (B12.9) | B12.8 wavy bisect; layout cutter clearance |
-| **Join rims to valve body**; **Valve gap (mm)** for rim trim | HD ZBrush-only workflow replacement |
-| ZBrush import/export + **mold bundle**; mm setup; checklist | Silicone volume, Pro licensing (Fase 2+) |
-| Quality INFO/WARNING UX; flange/bisect offset UI | Six heavy reference meshes (manual appendix when assets ship) |
+| **Build full layout**, **extend flange**, **apply to rims**, **Build reinforcement** | Optional flange subdiv in-panel (**1.5.2**) |
+| **Blade extend** (10 mm default) + Solidify 0.3 mm | Full Stampi-only operators |
+| **Apply Federico preset**; **Alt+right-click** remove anchor | Silicone volume, Pro licensing (Fase 2+) |
+| ZBrush import/export, mold bundle, file **unit** selector (Slice B/D9) | Windows sign-off for Alt+RMB (macOS tested) |
+| Mesh bolt band + core **0.0.21** (Blender 5.2 / Python 3.13) | |
 
-Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest recommended: **v1.1.0**). **Fase 1 exit** remains documented on **v1.0.0** (`PHASE1-EXIT.md`).
+Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releases/latest)** on the release you install (latest installable: **v1.5.1**). After install: **enable Seam Runner** in **Preferences → Extensions**, then **quit Blender completely** and reopen (loads bundled core).
 
 ---
 
@@ -58,7 +59,7 @@ Use **[TESTING.md](https://github.com/alessandroiori/seam-runner-releases/releas
 | Item | Requirement |
 | --- | --- |
 | **OS (acceptance)** | **Windows x64** (same zip also installs on **macOS** and **Linux**) |
-| **Blender (recommended)** | **[5.2.2](https://www.blender.org/download/)** |
+| **Blender (recommended)** | **[5.2.3 LTS](https://www.blender.org/download/)** (acceptance); manifest min **4.5.0** |
 | **Blender (minimum)** | **4.5.0** (extension manifest) |
 | **Network** | To download Blender and release assets; add-on runs offline after install |
 
@@ -78,25 +79,25 @@ GPL: you may request **corresponding source** for the extension from the maintai
 
 ## Download a release
 
-1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v1.1.0** (or latest).
+1. **[Releases](https://github.com/alessandroiori/seam-runner-releases/releases)** → open **v1.5.1** (or latest with a **`seam_runner-*.zip`** asset).
 2. Under **Assets**, download:
 
    | Asset | Purpose |
    | --- | --- |
-   | **`seam_runner-1.1.0.zip`** | Install in Blender |
-   | **`seam_runner-1.1.0.zip.sha256`** | Optional integrity check |
-   | **`RELEASE.md`**, **`TESTING.md`**, **`CLIENT-SUMMARY.md`** | Notes and checklist |
+   | **`seam_runner-1.5.1.zip`** | Install in Blender |
+   | **`seam_runner-1.5.1.zip.sha256`** | Optional integrity check |
+   | **`RELEASE.md`**, **`TESTING.md`** | Notes and checklist |
 
    Use **`seam_runner-….zip`**, not GitHub’s auto-generated **“Source code (zip)”** (that is this repo’s README/LICENSE snapshot, not the add-on).
 
-3. CLI: `gh release download v1.1.0 -R alessandroiori/seam-runner-releases`
+3. CLI: `gh release download v1.5.1 -R alessandroiori/seam-runner-releases`
 
 ---
 
 ## Verify the download (SHA-256)
 
-**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-1.0.0.zip`
-**macOS / Linux:** `shasum -a 256 seam_runner-1.0.0.zip`
+**Windows (PowerShell):** `Get-FileHash -Algorithm SHA256 .\seam_runner-1.5.1.zip`
+**macOS / Linux:** `shasum -a 256 seam_runner-1.5.1.zip`
 
 Match the `.sha256` file from the **same** release.
 
@@ -104,10 +105,11 @@ Match the `.sha256` file from the **same** release.
 
 ## Install in Blender
 
-1. Install **[Blender 5.2.2](https://www.blender.org/download/)** (or maintainer-approved version).
+1. Install **[Blender 5.2.x LTS](https://www.blender.org/download/)** (or maintainer-approved version).
 2. **Edit → Preferences → Get Extensions → Install from Disk…**
-3. Select **`seam_runner-1.0.0.zip`** — **do not unzip**.
-4. Enable **Seam Runner**; restart Blender if the sidebar tab is missing.
+3. Select **`seam_runner-1.5.1.zip`** — **do not unzip**.
+4. **Enable Seam Runner** in **Preferences → Extensions**.
+5. **Quit Blender completely** and reopen (loads bundled core **0.0.21**).
 
 ---
 
@@ -115,12 +117,12 @@ Match the `.sha256` file from the **same** release.
 
 1. **3D Viewport** → **N** → **Seam Runner**.
 2. **Project → Set up project (mm)** (or import with **Millimetres on import**).
-3. **Import → Import from ZBrush** (OBJ / PLY / STL).
-4. **Lines → Add partition line → Edit anchors** (Enter to rebuild).
-5. **Flanges → Build full layout** (or step through parts).
-6. **Import → Export mold bundle**; optional **Valves → Extract valves (experimental)**.
+3. **Import → Import from ZBrush** (OBJ / PLY / STL); set **File unit** if needed.
+4. **Lines → Add partition line → Edit anchors** (Enter to rebuild; **Alt+right-click** to remove an anchor).
+5. **Flanges → Apply Federico preset** (optional) → **Build full layout** (or step through parts).
+6. **Build reinforcement** after bolts; **Import → Export mold bundle**.
 
-Panel should show **Seam Runner** and version **1.0.0** (matches the zip you installed).
+Panel should show **Seam Runner 1.5.1** and **Core 0.0.21** (after restart).
 
 ---
 
@@ -146,7 +148,9 @@ Send the maintainer that **one line**.
 | --- | --- |
 | **Wrong download** | Use **`seam_runner-X.Y.Z.zip`**, not “Source code (zip)”. |
 | **Browser blocked download** | Releases page, another browser, or `gh release download`. |
-| **Install fails** | Blender ≥ 4.5; unmodified zip; try 5.2.2. |
+| **Install fails** | Blender ≥ 4.5; unmodified zip; try 5.2.x LTS. |
+| **Extension not in panel** | **Preferences → Extensions** → enable **Seam Runner**. |
+| **Core version banner** | Quit Blender fully after install/update; reinstall zip if needed. |
 | **Wrong panel version** | Reinstall from the correct release tag. |
 
 ---
@@ -155,6 +159,9 @@ Send the maintainer that **one line**.
 
 | Version | Summary |
 | --- | --- |
+| [**v1.5.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1) | Blade ext, reinforcement, Federico preset, Alt+RMB anchors; core **0.0.21** |
+| [**v1.5.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.0) | Mesh bolt band, import file units; core **0.0.20** |
+| [**v1.4.4**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.4.4) | Apply hide, legacy extend message, in-memory core restart banner; core **0.0.15** |
 | [**v1.1.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.1.0) | Join rims + valve gap; TESTING A–M; core 0.0.12 |
 | [**v1.0.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.0.0) | **Fase 1 exit** — B12.9 discard internal, TESTING A–K |
 | [**v0.10.0**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.10.0) | Rim trim reliability (solver fallback, clearance mm) |
@@ -180,7 +187,18 @@ Send the maintainer that **one line**.
 | [**v0.0.2**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.2) | Engine contract, panel foundations |
 | [**v0.0.1**](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v0.0.1) | Installable shell |
 
-Tag **`v1.1.0`** → panel **1.1.0**.
+Latest installable tag **`v1.5.1`** → panel **1.5.1**, core **0.0.21**.
+
+---
+
+## Authors
+
+Original software authors (development history lives in the private monorepo).
+
+| Name | GitHub |
+| --- | --- |
+| **Alessandro Iori** (maintainer) | [@alessandroiori](https://github.com/alessandroiori) |
+| **Federico Iori** | [@federicoiori95-debug](https://github.com/federicoiori95-debug) |
 
 ---
 
