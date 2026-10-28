@@ -1,7 +1,7 @@
 # Seam Runner
 
-[![License: GPL-3.0-or-later](https://img.shields.io/github/license/alessandroiori/seam-runner-releases?label=License)](LICENSE)
-[![Latest release: v1.5.1](https://img.shields.io/github/v/release/alessandroiori/seam-runner-releases?label=Latest%20release&color=007ec6)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue.svg)](LICENSE)
+[![Latest release: v1.5.1](https://img.shields.io/badge/release-v1.5.1-blue.svg)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
 [![Extension](https://img.shields.io/badge/extension-1.5.1-informational)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
 [![Core](https://img.shields.io/badge/core-0.0.21-informational)](https://github.com/alessandroiori/seam-runner-releases/releases/tag/v1.5.1)
 
